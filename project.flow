@@ -1,0 +1,32 @@
+{
+
+  project : {
+
+      //These first two are required
+    name : 'firstProject',
+    version : '0.0.1',
+    author : 'Rushifaa',
+
+      //This configures your app.
+      //The package is important, it's used 
+      //for save locations, initializing mobile project files etc
+    app : {
+      name : 'luxe_firstProject',
+      package : 'at.rushifaa.firstProject'
+    },
+
+      //This configures the build process
+    build : {
+      dependencies : {
+        luxe : '*'
+      }
+    },
+
+      //Copies over all the assets to the output
+    files : {
+      assets : 'assets/'
+    }
+
+  } //project
+
+}
