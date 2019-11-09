@@ -25,7 +25,7 @@
 
 ## About the Project
 
-I just discoverd a "new" game engine that looks interesting to me, so I thought "I want to build a game with it".
+I just discovered a "new" game engine that looks interesting to me, so I thought "I want to build a game with it".
  
 *Please note that I am new at this Game Development stuff. :)<br/>
 
