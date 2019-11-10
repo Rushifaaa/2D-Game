@@ -6,7 +6,7 @@ import luxe.Vector;
 
 class Main extends luxe.Game {
 	override function config(config:GameConfig) {
-		config.window.title = 'luxe game';
+		config.window.title = '2D-Game';
 
 		config.window.width = 960;
 		config.window.height = 640;
@@ -17,17 +17,24 @@ class Main extends luxe.Game {
 	var block:Sprite;
 
 	override function ready() {
-		block = new Sprite({
+        block = new Sprite({
 			name: 'block sprite',
 			pos: Luxe.screen.mid,
 			color: new Color().rgb(0xf94b04),
 			size: new Vector(128, 128)
 		});
+
+
+
 	} // ready
 
 	override function onmousemove(event:MouseEvent) {
 		block.pos = event.pos;
 	} // onmousemove
+
+    override function onmousedown(event: MouseEvent) {
+
+    }
 
 	override function onkeyup(event:KeyEvent) {
 		if (event.keycode == Key.escape) {

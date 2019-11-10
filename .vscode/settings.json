@@ -1,7 +1,5 @@
 {
     "haxe.configurations": [
-        [
-            "bin/mac64.build/build.hxml"
-        ]
+        ["bin/mac64.build/build.hxml"]
     ]
 }
