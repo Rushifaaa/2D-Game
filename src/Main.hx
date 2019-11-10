@@ -1,33 +1,41 @@
 import luxe.GameConfig;
 import luxe.Input;
+import luxe.Sprite;
+import luxe.Color;
+import luxe.Vector;
 
 class Main extends luxe.Game {
+	override function config(config:GameConfig) {
+		config.window.title = 'luxe game';
 
-    override function config(config:GameConfig) {
+		config.window.width = 960;
+		config.window.height = 640;
+		config.window.fullscreen = false;
+		return config;
+	} // config
 
-        config.window.title = 'luxe game';
-        config.window.width = 960;
-        config.window.height = 640;
-        config.window.fullscreen = false;
+	var block:Sprite;
 
-        return config;
+	override function ready() {
+		block = new Sprite({
+			name: 'block sprite',
+			pos: Luxe.screen.mid,
+			color: new Color().rgb(0xf94b04),
+			size: new Vector(128, 128)
+		});
+	} // ready
 
-    } //config
+	override function onmousemove(event:MouseEvent) {
+		block.pos = event.pos;
+	} // onmousemove
 
-    override function ready() {
+	override function onkeyup(event:KeyEvent) {
+		if (event.keycode == Key.escape) {
+			Luxe.shutdown();
+		}
+	} // onkeyup
 
-    } //ready
-
-    override function onkeyup(event:KeyEvent) {
-
-        if(event.keycode == Key.escape) {
-            Luxe.shutdown();
-        }
-
-    } //onkeyup
-
-    override function update(delta:Float) {
-
-    } //update
-
-} //Main
+	override function update(delta:Float) {
+		block.rotation_z += 40 * delta;
+	} // update
+} // Main
