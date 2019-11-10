@@ -33,7 +33,7 @@ I just discovered a "new" game engine that looks interesting to me, so I thought
 ## Getting Started
 
 1. You need Haxe
-    * First you need to install Haxe so go to their [page]("https://haxe.org/") and install Haxe
+    * First you need to install Haxe so go to their [*page*]("https://haxe.org/") and install Haxe
 
 2. You need git (but i think you can do that without me..)
 
